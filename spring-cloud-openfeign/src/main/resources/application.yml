@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-cloud-openfeign
+
+logging:
+  level:
+    '[com.example.cloud.client]': DEBUG
+    
