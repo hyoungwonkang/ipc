@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: product-server
+server:
+  port: 8081
+  
+logging:
+  level:
+    '[com.example.cloud.client]': DEBUG
+    
