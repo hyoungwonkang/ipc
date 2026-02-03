@@ -1,4 +1,4 @@
-package com.example.user.controller;
+package com.example.board.controller;
 
 import com.example.common.dto.UserResponse;
 import org.springframework.http.HttpStatus;

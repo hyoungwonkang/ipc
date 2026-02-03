@@ -1,8 +1,7 @@
-package com.example.board.controller;
+package com.example.board.service;
 
 import com.example.board.dto.BoardRequest;
 import com.example.board.dto.BoardResponse;
-import com.example.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
