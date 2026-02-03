@@ -1,0 +1,12 @@
+dependencies {
+  // common-proto
+  implementation project(':common-proto')
+  
+  // gRPC Server: Spring Boot에서 gRPC 서버를 쉽게 띄워주는 스타터 (net.devh)
+  implementation 'net.devh:grpc-server-spring-boot-starter:3.1.0.RELEASE' 
+
+  implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+  // Eureka Jersey: Eureka 통신 시 사용 (Issue로 안함)
+  implementation 'com.netflix.eureka:eureka-client-jersey3:2.0.4'
+}

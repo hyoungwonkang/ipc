@@ -1,0 +1,35 @@
+plugins {
+  id 'com.google.protobuf' version '0.9.6'
+}
+
+bootJar { enabled = false }
+jar { enabled = true }
+
+dependencies {
+  implementation 'io.grpc:grpc-netty-shaded:1.69.0'
+
+  implementation 'io.grpc:grpc-protobuf:1.69.0'
+
+  implementation 'io.grpc:grpc-stub:1.69.0'
+
+  compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
+}
+
+protobuf {
+  protoc {
+    def protocVersion = '3.25.5'
+    artifact = "com.google.protobuf:protoc:${protocVersion}"
+  }
+
+  plugins {
+    grpc {
+      artifact = 'io.grpc:protoc-gen-grpc-java:1.69.0'
+    }
+  }
+
+  generateProtoTasks {
+    all()*.plugins {
+      grpc {}
+    }
+  }
+}

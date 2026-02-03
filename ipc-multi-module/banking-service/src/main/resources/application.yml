@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+grpc:
+  server:
+    port: 9090
+    # 라이브러리의 자동 Eureka 등록 기능을 끔 (NPE 충돌 방지)
+    cloud:
+      eureka:
+        enabled: false
+
+spring:
+  application:
+    name: banking-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+  instance:
+    metadata-map:
+      grpc-port: ${grpc.server.port}
